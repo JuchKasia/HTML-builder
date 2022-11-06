@@ -8,7 +8,7 @@ const WriteStream = fs.createWriteStream(path.join(__dirname, 'text.txt'));
 
 stdout.write('Enter your text: \n');
 stdin.on('data' , data => { 
-  if (data.toString() === 'exit') { 
+  if (data.toString().trim() === 'exit') { 
     stdout.write('Have a good day');
     process.exit();
   } else {
